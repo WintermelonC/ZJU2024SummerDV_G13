@@ -13,8 +13,8 @@ export default function SelectButton({ content }) {
 	};
 
 	return (
-		<FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-			<InputLabel id={`select-${content}-label`} >{content}</InputLabel>
+		<FormControl sx={{ m: 1, minWidth: 135 }} variant="standard">
+			<InputLabel id={`select-${content}-label`} sx={{ fontSize: '12px !important' }}>{content}</InputLabel>
 			<CreateOptionList content={content} option={option} handleChange={handleChange} />
 		</FormControl>
 	);
@@ -35,8 +35,6 @@ function CreateOptionList({ content, option, handleChange }) {
 		optionList.push("2", "4", "8", "16");
 	} else if (content === "RunIndex") {
 		optionList.push("0", "1", "2", "3", "4");
-	} else {
-		optionList.push("None");
 	}
 
 	const menuList = optionList.map((option, index) =>
@@ -50,6 +48,9 @@ function CreateOptionList({ content, option, handleChange }) {
 			label={content}
 			onChange={handleChange}
 		>
+			<MenuItem value="">
+				<em>None</em>
+			</MenuItem>
 			{menuList}
 		</Select>
 	);

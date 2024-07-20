@@ -30,7 +30,6 @@ function App() {
                 sx={{
                   height: '720px',
                   padding: '16px',
-                  display: 'flex',
                   flexDirection: 'column',
                   overflow: 'auto'
                 }}

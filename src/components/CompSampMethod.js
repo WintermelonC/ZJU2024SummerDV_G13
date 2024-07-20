@@ -10,6 +10,10 @@ export default function CompSampMethod() {
 				Comparing the impact of different Sampling Methods on data under various scenarios
 			</MyTitle>
 			<SelectButton content="BarChartType" />
+			<SelectButton content="ModelName" />
+			<SelectButton content="SamplingTarget" />
+			<SelectButton content="DownSamplingLevel" />
+			<SelectButton content="RunIndex" />
 		</React.Fragment>
 	);
 }
