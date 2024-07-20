@@ -11,10 +11,10 @@ export default function MyToolbar() {
 	return (
 		<AppBar position="absolute">
 			<Toolbar variant='dense'>
-				<Typography variant="h6" component="div" sx={{ flexGrow: 1 }} noWrap>
+				<Typography variant="h6" component="h1" sx={{ flexGrow: 1 }} noWrap>
 					Group 13
 				</Typography>
-				<Typography variant="h6" component="div" sx={{ flexGrow: 1 }} noWrap>
+				<Typography variant="h6" component="h1" sx={{ flexGrow: 1 }} noWrap>
 					ZJU 2024 Summer Data Visualization Bonus Project
 				</Typography>
 				<a href='https://github.com/WintermelonC/ZJU2024SummerDV_G13' target="_blank" rel="noopener noreferrer">

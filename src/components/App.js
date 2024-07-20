@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 
 import MyToolbar from './MyToolbar.js';
+import CompSampMethod from './CompSampMethod.js';
 
 function App() {
   return (
@@ -25,8 +26,16 @@ function App() {
         <Container maxWidth="lg" sx={{ my: '8px', px: '8px !important' }}>
           <Grid container spacing={1}>
             <Grid item xs={12} md={8} lg={9}>
-              <Paper sx={{ height: '720px' }}>
-
+              <Paper
+                sx={{
+                  height: '720px',
+                  padding: '16px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  overflow: 'auto'
+                }}
+              >
+                <CompSampMethod />
               </Paper>
             </Grid>
           </Grid>

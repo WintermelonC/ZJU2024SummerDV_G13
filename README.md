@@ -10,18 +10,18 @@
 在 pull 到本地仓库后进行修改时，请先新建一个分支并合理命名，不要直接在 main 分支上提交节点。修改完后 push 到远程仓库，等待管理员确认。
 # 策划
 ## 变量规定
-A变量：5个图表类型：A1、A2、A3、A4、A5
+(BarChartType) A变量：5个图表类型：A1、A2、A3、A4、A5
 
-B变量：2个AI模型：VGG、Res
+(ModelName) B变量：2个AI模型：VGG19、ResNet50
 
-C变量：高度和比率：height、ratio
+(SamplingTarget) C变量：高度和比率：height、ratio
 
-D变量：4个分割数据方法：
+(SamplingMethod) D变量：4个分割数据方法：
 - D1：IID
 - D2：COV
 - D3：ADV
 - D4：OOD
 
-E变量：4个不同数量：16、8、4、2
+(DownSamplingLevel) E变量：4个不同数量：16、8、4、2
 
-F变量：5个运行次数：0、1、2、3、4
+(RunIndex) F变量：5个运行次数：0、1、2、3、4
