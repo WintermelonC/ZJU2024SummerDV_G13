@@ -1,5 +1,6 @@
 import React from 'react';
 import MyToolbar from './MyToolbar.js';
+import Box from '@mui/material/Box';
 
 // import logo from './logo.svg';
 // import './App.css';
@@ -27,9 +28,9 @@ import MyToolbar from './MyToolbar.js';
 
 function App() {
   return (
-    <div>
+    <Box sx={{bgcolor: "#f5f5f5"}}>
       <MyToolbar />
-    </div>
+    </Box>
   );
 }
 
