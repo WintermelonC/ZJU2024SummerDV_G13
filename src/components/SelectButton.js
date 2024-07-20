@@ -15,20 +15,12 @@ export default function SelectButton({ content }) {
 	return (
 		<FormControl sx={{ m: 1, minWidth: 120 }} size="small">
 			<InputLabel id={`select-${content}-label`} >{content}</InputLabel>
-			<Select
-				labelId={`select-${content}-label`}
-				id={`select-${content}`}
-				value={option}
-				label={content}
-				onChange={handleChange}
-			>
-				<CreateOptionList content={content} />
-			</Select>
+			<CreateOptionList content={content} option={option} handleChange={handleChange} />
 		</FormControl>
 	);
 }
 
-function CreateOptionList({ content }) {
+function CreateOptionList({ content, option, handleChange }) {
 	const optionList = [];
 
 	if (content === "BarChartType") {
@@ -51,9 +43,15 @@ function CreateOptionList({ content }) {
 		<MenuItem key={index} value={option}>{option}</MenuItem>);
 
 	return (
-		<React.Fragment>
+		<Select
+			labelId={`select-${content}-label`}
+			id={`select-${content}`}
+			value={option}
+			label={content}
+			onChange={handleChange}
+		>
 			{menuList}
-		</React.Fragment>
+		</Select>
 	);
 }
 
@@ -63,4 +61,6 @@ SelectButton.propTypes = {
 
 CreateOptionList.propTypes = {
 	content: PropTypes.string,
+	option: PropTypes.string,
+	handleChange: PropTypes.func.isRequired,
 };
