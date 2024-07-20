@@ -14,6 +14,7 @@ function App() {
       <MyToolbar />
       <Box
         component="main"
+        bgcolor="#f5f5f5"
         sx={{
           flexGrow: 1,
           height: '100vh',
