@@ -1,8 +1,7 @@
 # ZJU 2024年夏学期大数据可视化 可视分析系统设计 Group13
 # 使用到的包
 - eslint etc.
-- echarts
-- echarts-for-react
+- echarts etc.
 - material UI etc.
 # 使用方法
 在本地文件夹下依次运行：`npm install`  `npm start`
