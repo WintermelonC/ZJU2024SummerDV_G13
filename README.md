@@ -1,5 +1,6 @@
 # ZJU 2024年夏学期大数据可视化 可视分析系统设计 Group13
 # 使用到的包
+- react etc.
 - eslint etc.
 - echarts etc.
 - material UI etc.
