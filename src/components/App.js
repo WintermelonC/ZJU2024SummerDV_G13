@@ -1,6 +1,8 @@
 import React from 'react';
-import MyToolbar from './MyToolbar.js';
 import Box from '@mui/material/Box';
+
+import MyToolbar from './MyToolbar.js';
+import OverallRepre from './OverallRepre.js';
 
 // import logo from './logo.svg';
 // import './App.css';
@@ -28,8 +30,9 @@ import Box from '@mui/material/Box';
 
 function App() {
   return (
-    <Box sx={{bgcolor: "#f5f5f5"}}>
+    <Box sx={{ bgcolor: '#f5f5f5' }}>
       <MyToolbar />
+      <OverallRepre />
     </Box>
   );
 }
