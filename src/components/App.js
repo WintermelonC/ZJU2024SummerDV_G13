@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 
 import MyToolbar from './MyToolbar.js';
-import CompSampMethod from './CompSampMethod.js';
+import CompModelName from './CompModelName.js';
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
                   overflow: 'auto'
                 }}
               >
-                <CompSampMethod />
+                <CompModelName />
               </Paper>
             </Grid>
           </Grid>
