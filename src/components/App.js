@@ -23,15 +23,16 @@ function App() {
         }}
       >
         <Box component="div" sx={{ height: '48px' }}></Box>
-        <Container maxWidth="lg" sx={{ my: '8px', px: '8px !important' }}>
+        <Container maxWidth="xl" sx={{ my: '8px', px: '8px !important' }}>
           <Grid container spacing={1}>
-            <Grid item xs={12} md={8} lg={9}>
+            <Grid item xs={12} md={8} xl={8}>
               <Paper
                 sx={{
-                  height: '720px',
+                  height: '480px',
                   padding: '16px',
                   flexDirection: 'column',
-                  overflow: 'auto'
+                  overflow: 'auto',
+                  display: 'flex'
                 }}
               >
                 <CompModelName />
