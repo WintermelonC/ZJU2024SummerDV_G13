@@ -56,8 +56,19 @@ export default function CompModelName() {
 			formatter: function (params) {
 				let result;
 				let first = true;
+				let itemsWithValues = [];
 				params.forEach(function (item) {
-					// 假设我们不想显示名为"IID"的系列数据
+					if (item.value !== '-') {
+						itemsWithValues.push(item);
+					}
+				});
+
+				// 对具有具体数据的项进行排序，从大到小
+				itemsWithValues.sort(function (a, b) {
+					return b.value - a.value;
+				});
+
+				itemsWithValues.forEach(function (item) {
 					if (item.value !== '-') {
 						if (item.dataIndex >= 0 && item.dataIndex <= 3) {
 							if (first) {
@@ -67,7 +78,7 @@ export default function CompModelName() {
 							result += item.marker + ' ' + item.seriesName + ': ' + item.value + '<br/>';
 						} else {
 							if (first) {
-								result = ' Ratio' + '<br/>';
+								result = 'Ratio ' + item.axisValueLabel + '<br/>';
 								first = false;
 							}
 							result += item.marker + ' ' + item.seriesName + ': ' + item.value + '<br/>';
@@ -76,7 +87,7 @@ export default function CompModelName() {
 				});
 				return result;
 			},
-			position: [90, 65]
+			position: ['10.5%', '15%']
 		},
 		series: [
 			{
