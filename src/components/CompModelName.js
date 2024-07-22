@@ -41,7 +41,8 @@ export default function CompModelName() {
 			splitNumber: 8,
 			splitArea: {
 				show: true
-			}
+			},
+			max: 0.45
 		},
 		legend: {
 			top: 'bottom'
