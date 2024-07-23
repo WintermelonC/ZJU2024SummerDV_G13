@@ -3,9 +3,10 @@ import React from 'react';
 import MyTitle from './MyTitle';
 import SelectSampTarget from './SelectSampTarget';
 import SelectSampMethod from './SelectSampMethod';
+import BarChart from './BarChart';
 
 export default function CompRunIndex() {
-	const [sampTarget, setSampTarget] = React.useState('Height');
+	const [sampTarget, setSampTarget] = React.useState('Ratio');
 	const [sampMethod, setSampMethod] = React.useState('IID');
 
 	const handleTargetChange = (value) => {
@@ -20,6 +21,7 @@ export default function CompRunIndex() {
 			<MyTitle>RunIndex Comparison</MyTitle>
 			<SelectSampTarget onTargetChange={handleTargetChange} />
 			<SelectSampMethod onTargetChange={handleMethodChange} />
+			<BarChart sampTarget={sampTarget} sampMethod={sampMethod} />
 		</React.Fragment>
 	);
 }

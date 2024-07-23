@@ -10,7 +10,7 @@ export default function CompSampMethod() {
 			{
 				type: 'category',
 				data: ['2', '4', '8', '16', '2', '4', '8', '16'],
-				name: 'Down \n Sampling \n Level',
+				name: 'Down\nSampling\nLevel',
 				nameGap: 40,
 				nameTextStyle: {
 					align: 'center'
@@ -19,7 +19,7 @@ export default function CompSampMethod() {
 			{
 				type: 'category',
 				data: ['Height', 'Ratio'],
-				name: 'Sampling \n Target',
+				name: 'Sampling\nTarget',
 				nameGap: 40,
 				nameTextStyle: {
 					align: 'center'

@@ -12,7 +12,7 @@ export default function SelectSampTarget({ onTargetChange }) {
 
 	return (
 		<FormControl variant="standard" sx={{ m: 1, minWidth: 140 }}>
-			<InputLabel id="select-standard-label">SamplingTarget</InputLabel>
+			<InputLabel id="select-standard-label" size='small'>SamplingTarget</InputLabel>
 			<Select
 				labelId="select-standard-label"
 				id="select-standard"
