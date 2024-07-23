@@ -1,14 +1,13 @@
 import React from 'react';
 
 import MyTitle from './MyTitle';
-import SelectButton from './SelectButton';
+import SelectSampTarget from './SelectSampTarget';
 
 export default function CompRunIndex() {
 	return (
 		<React.Fragment>
 			<MyTitle>RunIndex Comparison</MyTitle>
-			<SelectButton content="SamplingTarget" />
-			<SelectButton content="SamplingMethod" />
+			<SelectSampTarget />
 		</React.Fragment>
 	);
 }
