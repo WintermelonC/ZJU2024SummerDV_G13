@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 
 import MyToolbar from './MyToolbar.js';
-import CompModelName from './CompModelName.js';
+import CompSampMethod from './CompSampMethod.js';
 import CompRunIndex from './CompRunIndex.js';
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
                   display: 'flex'
                 }}
               >
-                <CompModelName />
+                <CompSampMethod />
               </Paper>
             </Grid>
             <Grid item xs={12} md={6} xl={6}>

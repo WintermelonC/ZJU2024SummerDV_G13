@@ -4,7 +4,7 @@ import EChartsReact from 'echarts-for-react';
 
 import MyTitle from './MyTitle.js';
 
-export default function CompModelName() {
+export default function CompSampMethod() {
 	const option = {
 		xAxis: [
 			{
