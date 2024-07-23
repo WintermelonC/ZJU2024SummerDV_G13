@@ -7,6 +7,7 @@ import Paper from '@mui/material/Paper';
 
 import MyToolbar from './MyToolbar.js';
 import CompModelName from './CompModelName.js';
+import CompRunIndex from './CompRunIndex.js';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Box component="div" sx={{ height: '48px' }}></Box>
         <Container maxWidth="xl" sx={{ my: '8px', px: '8px !important' }}>
           <Grid container spacing={1}>
-            <Grid item xs={12} md={8} xl={8}>
+            <Grid item xs={12} md={6} xl={6}>
               <Paper
                 sx={{
                   height: '480px',
@@ -36,6 +37,18 @@ function App() {
                 }}
               >
                 <CompModelName />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6} xl={6}>
+              <Paper
+                sx={{
+                  height: '480px',
+                  padding: '16px',
+                  flexDirection: 'column',
+                  overflow: 'auto',
+                }}
+              >
+                <CompRunIndex />
               </Paper>
             </Grid>
           </Grid>

@@ -13,7 +13,7 @@ export default function SelectButton({ content }) {
 	};
 
 	return (
-		<FormControl sx={{ m: 1, minWidth: 135 }} variant="standard">
+		<FormControl sx={{ m: 1, minWidth: 140 }} variant="standard">
 			<InputLabel id={`select-${content}-label`} sx={{ fontSize: '12px !important' }}>{content}</InputLabel>
 			<CreateOptionList content={content} option={option} handleChange={handleChange} />
 		</FormControl>
