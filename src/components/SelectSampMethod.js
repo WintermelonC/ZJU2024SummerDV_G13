@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
-export default function SelectSampTarget({ onTargetChange }) {
-	const [target, setTarget] = React.useState('Height');
+export default function SelectSampMethod({ onTargetChange }) {
+	const [target, setTarget] = React.useState('IID');
 
 	const handleChange = (event) => {
 		setTarget(event.target.value);
@@ -12,24 +12,26 @@ export default function SelectSampTarget({ onTargetChange }) {
 
 	return (
 		<FormControl variant="standard" sx={{ m: 1, minWidth: 140 }}>
-			<InputLabel id="select-standard-label">SamplingTarget</InputLabel>
+			<InputLabel id="select-standard-label">SamplingMethod</InputLabel>
 			<Select
 				labelId="select-standard-label"
 				id="select-standard"
 				value={target}
 				onChange={handleChange}
-				label="SamplingTarget"
+				label="SamplingMethod"
 			>
 				<MenuItem value="">
 					<em>None</em>
 				</MenuItem>
-				<MenuItem value="Height">Height</MenuItem>
-				<MenuItem value="Ratio">Ratio</MenuItem>
+				<MenuItem value="IID">IID</MenuItem>
+				<MenuItem value="COV">COV</MenuItem>
+				<MenuItem value="ADV">ADV</MenuItem>
+				<MenuItem value="OOD">OOD</MenuItem>
 			</Select>
 		</FormControl>
 	);
 }
 
-SelectSampTarget.propTypes = {
+SelectSampMethod.propTypes = {
 	onTargetChange: PropTypes.func.isRequired,
 };
