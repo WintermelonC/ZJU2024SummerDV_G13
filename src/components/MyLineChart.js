@@ -4,6 +4,7 @@ import EChartsReact from 'echarts-for-react';
 import PropTypes from 'prop-types';
 
 import GetHeightSeries from './GetHeightSeries';
+import GetRatioSeries from './GetRatioSeries';
 
 export default function MyLineChart({ sampTarget }) {
 	const option = GetOption(sampTarget);
@@ -17,6 +18,7 @@ export default function MyLineChart({ sampTarget }) {
 function GetOption(sampTarget) {
 	let option = {};
 	const heightSeriesOption = GetHeightSeries();
+	const ratioSeriesOption = GetRatioSeries();
 	const xAxisOption = [
 		{
 			gridIndex: 0,
@@ -422,7 +424,7 @@ function GetOption(sampTarget) {
 				legend: {},
 				xAxis: xAxisOption,
 				yAxis: yAxisOption,
-				series: heightSeriesOption,
+				series: ratioSeriesOption,
 			}
 			break;
 		}
