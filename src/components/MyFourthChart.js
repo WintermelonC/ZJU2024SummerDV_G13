@@ -49,9 +49,11 @@ export default function CompSampMethod() {
 		},
 		legend: {
 			type: 'plain',
-			orient: 'horizontal',
+			orient: 'vertical',
+			left: 'right',
+			top: '25%',
 			itemGap: 5,
-			itemWidth: 20,
+			// itemWidth: 20,
 			textStyle: {
 				fontSize: 10
 			},
@@ -59,7 +61,7 @@ export default function CompSampMethod() {
 		series: [
 			{
 				type: 'line',
-				name: 'ADV ResNet',
+				name: 'ADV\nResNet',
 				data: [0.0570, 0.1073, 0.2162, 0.2547],
 				lineStyle: {
 					color: 'rgb(84, 112, 198)'
@@ -67,7 +69,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'ADV ResNet',
+				name: 'ADV\nResNet',
 				data: ['-', '-', '-', '-', 0.0238, 0.0943, 0.1804, 0.2878],
 				lineStyle: {
 					color: 'rgb(84, 112, 198)'
@@ -75,7 +77,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'COV ResNet',
+				name: 'COV\nResNet',
 				data: [0.0245, 0.0330, 0.0581, 0.1098],
 				lineStyle: {
 					color: 'rgb(145, 204, 117)'
@@ -83,7 +85,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'COV ResNet',
+				name: 'COV\nResNet',
 				data: ['-', '-', '-', '-', 0.0193, 0.0210, 0.0276, 0.1352],
 				lineStyle: {
 					color: 'rgb(145, 204, 117)'
@@ -91,7 +93,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'IID ResNet',
+				name: 'IID\nResNet',
 				data: [0.0394, 0.0683, 0.0991, 0.1401],
 				lineStyle: {
 					color: 'rgb(250, 200, 88)'
@@ -99,7 +101,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'IID ResNet',
+				name: 'IID\nResNet',
 				data: ['-', '-', '-', '-', 0.0194, 0.0219, 0.0419, 0.1658],
 				lineStyle: {
 					color: 'rgb(250, 200, 88)'
@@ -107,7 +109,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'OOD ResNet',
+				name: 'OOD\nResNet',
 				data: [0.0880, 0.1813, 0.2220, 0.2529],
 				lineStyle: {
 					color: 'rgb(238, 102, 102)'
@@ -115,7 +117,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'OOD ResNet',
+				name: 'OOD\nResNet',
 				data: ['-', '-', '-', '-', 0.0977, 0.2465, 0.3275, 0.3890],
 				lineStyle: {
 					color: 'rgb(238, 102, 102)'
@@ -124,7 +126,7 @@ export default function CompSampMethod() {
 
 			{
 				type: 'line',
-				name: 'ADV VGG19',
+				name: 'ADV\nVGG19',
 				data: [0.0420, 0.0881, 0.2218, 0.2704],
 				lineStyle: {
 					type: 'dashed',
@@ -136,7 +138,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'ADV VGG19',
+				name: 'ADV\nVGG19',
 				data: ['-', '-', '-', '-', 0.0135, 0.0520, 0.1163, 0.2587],
 				lineStyle: {
 					type: 'dashed',
@@ -148,7 +150,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'COV VGG19',
+				name: 'COV\nVGG19',
 				data: [0.0144, 0.0216, 0.0410, 0.0774],
 				lineStyle: {
 					type: 'dashed',
@@ -160,7 +162,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'COV VGG19',
+				name: 'COV\nVGG19',
 				data: ['-', '-', '-', '-', 0.0110, 0.0115, 0.0160, 0.1020],
 				lineStyle: {
 					type: 'dashed',
@@ -172,7 +174,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'IID VGG19',
+				name: 'IID\nVGG19',
 				data: [0.0269, 0.0536, 0.0794, 0.1178],
 				lineStyle: {
 					type: 'dashed',
@@ -184,7 +186,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'IID VGG19',
+				name: 'IID\nVGG19',
 				data: ['-', '-', '-', '-', 0.0114, 0.0136, 0.0247, 0.1216],
 				lineStyle: {
 					type: 'dashed',
@@ -196,7 +198,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'OOD VGG19',
+				name: 'OOD\nVGG19',
 				data: [0.0597, 0.1462, 0.2013, 0.2546],
 				lineStyle: {
 					type: 'dashed',
@@ -208,7 +210,7 @@ export default function CompSampMethod() {
 			},
 			{
 				type: 'line',
-				name: 'OOD VGG19',
+				name: 'OOD\nVGG19',
 				data: ['-', '-', '-', '-', 0.0732, 0.2361, 0.3211, 0.3823],
 				lineStyle: {
 					type: 'dashed',

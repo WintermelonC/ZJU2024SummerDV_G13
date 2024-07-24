@@ -361,6 +361,9 @@ function GetOption(sampTarget) {
 				fontWeight: 'bold',
 				align: 'center'
 			},
+			axisLabel: {
+				fontSize: 10
+			}
 		},
 		{
 			gridIndex: 1,
@@ -377,6 +380,9 @@ function GetOption(sampTarget) {
 				fontWeight: 'bold',
 				align: 'center'
 			},
+			axisLabel: {
+				fontSize: 10
+			}
 		},
 		{
 			gridIndex: 2,
@@ -393,6 +399,9 @@ function GetOption(sampTarget) {
 				fontWeight: 'bold',
 				align: 'center'
 			},
+			axisLabel: {
+				fontSize: 10
+			}
 		},
 		{
 			gridIndex: 3,
@@ -409,6 +418,9 @@ function GetOption(sampTarget) {
 				fontWeight: 'bold',
 				align: 'center'
 			},
+			axisLabel: {
+				fontSize: 10
+			}
 		},
 	];
 
