@@ -6,6 +6,9 @@ import MyTitle from './MyTitle.js';
 
 export default function CompSampMethod() {
 	const option = {
+		grid: {
+			bottom: '5%'
+		},
 		xAxis: [
 			{
 				type: 'category',
@@ -45,7 +48,7 @@ export default function CompSampMethod() {
 			max: 0.45
 		},
 		legend: {
-			top: 'bottom'
+			top: 'top'
 		},
 		tooltip: {
 			trigger: 'axis',
@@ -87,7 +90,7 @@ export default function CompSampMethod() {
 				});
 				return result;
 			},
-			position: ['10.5%', '15%']
+			position: ['10.5%', '18%']
 		},
 		series: [
 			{
@@ -214,7 +217,7 @@ export default function CompSampMethod() {
 	}
 	return (
 		<React.Fragment>
-			<MyTitle>SamplingMethod Comparison</MyTitle>
+			<MyTitle>SamplingMethod Comparison: from SamplingLevel and SamplingTarget</MyTitle>
 			<Box component="div" style={{ flex: 1 }}>
 				<EChartsReact option={option} style={{ height: '100%', width: '100%' }} />
 			</Box>

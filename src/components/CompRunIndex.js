@@ -13,7 +13,7 @@ export default function CompRunIndex() {
 
 	return (
 		<React.Fragment>
-			<MyTitle>RunIndex Comparison</MyTitle>
+			<MyTitle>SamplingMethod Comparison: from RunIndex</MyTitle>
 			<SelectSampTarget onTargetChange={handleTargetChange} />
 			<MyLineChart sampTarget={sampTarget} />
 		</React.Fragment>
