@@ -1,7 +1,7 @@
 import React from 'react';
 
 import MyTitle from './MyTitle';
-import LineChart from './LineChart';
+import MyLineChart from './MyLineChart';
 import SelectSampTarget from './SelectSampTarget';
 
 export default function CompRunIndex() {
@@ -15,7 +15,7 @@ export default function CompRunIndex() {
 		<React.Fragment>
 			<MyTitle>RunIndex Comparison</MyTitle>
 			<SelectSampTarget onTargetChange={handleTargetChange} />
-			<LineChart sampTarget={sampTarget} />
+			<MyLineChart sampTarget={sampTarget} />
 		</React.Fragment>
 	);
 }

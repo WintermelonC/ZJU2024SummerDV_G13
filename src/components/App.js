@@ -46,6 +46,7 @@ function App() {
                   padding: '16px',
                   flexDirection: 'column',
                   overflow: 'auto',
+                  display: 'flex'
                 }}
               >
                 <CompRunIndex />
