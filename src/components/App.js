@@ -8,6 +8,8 @@ import Paper from '@mui/material/Paper';
 import MyToolbar from './MyToolbar.js';
 import CompSampMethod from './CompSampMethod.js';
 import CompRunIndex from './CompRunIndex.js';
+import MyThirdChart from './MyThirdChart.js';
+import MyFourthChart from './MyFourthChart.js';
 
 function App() {
   return (
@@ -62,7 +64,7 @@ function App() {
                   display: 'flex'
                 }}
               >
-                <CompSampMethod />
+                <MyThirdChart />
               </Paper>
             </Grid>
             <Grid item xs={12} md={6} xl={6}>
@@ -75,7 +77,7 @@ function App() {
                   display: 'flex'
                 }}
               >
-                <CompRunIndex />
+                <MyFourthChart />
               </Paper>
             </Grid>
           </Grid>

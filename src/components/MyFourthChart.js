@@ -1,0 +1,267 @@
+import React from 'react';
+import Box from '@mui/material/Box';
+import EChartsReact from 'echarts-for-react';
+
+import MyTitle from './MyTitle.js';
+
+export default function CompSampMethod() {
+	const option = {
+		xAxis: [
+			{
+				type: 'category',
+				data: ['2', '4', '8', '16', '2', '4', '8', '16'],
+				name: 'Down\nSampling\nLevel',
+				nameGap: 40,
+				nameTextStyle: {
+					align: 'center'
+				}
+			},
+			{
+				type: 'category',
+				data: ['Height', 'Ratio'],
+				name: 'Model\nName',
+				nameGap: 40,
+				nameTextStyle: {
+					align: 'center'
+				},
+				axisPointer: {
+					type: false
+				},
+				splitLine: {
+					show: true,
+					lineStyle: {
+						color: ['#aaa']
+					}
+				}
+			}
+		],
+		yAxis: {
+			type: 'value',
+			name: 'MeanError',
+			splitNumber: 8,
+			splitArea: {
+				show: true
+			},
+			// max: 0.45
+		},
+		legend: {
+			type: 'scroll',
+			orient: 'vertical',
+			animationDurationUpdate: 200,
+			itemGap: 15
+		},
+		// tooltip: {
+		// 	trigger: 'axis',
+		// 	axisPointer: {
+		// 		type: 'cross',
+		// 		snap: 'true'
+		// 	},
+		// 	formatter: function (params) {
+		// 		let result;
+		// 		let first = true;
+		// 		let itemsWithValues = [];
+		// 		params.forEach(function (item) {
+		// 			if (item.value !== '-') {
+		// 				itemsWithValues.push(item);
+		// 			}
+		// 		});
+
+		// 		// 对具有具体数据的项进行排序，从大到小
+		// 		itemsWithValues.sort(function (a, b) {
+		// 			return b.value - a.value;
+		// 		});
+
+		// 		itemsWithValues.forEach(function (item) {
+		// 			if (item.value !== '-') {
+		// 				if (item.dataIndex >= 0 && item.dataIndex <= 3) {
+		// 					if (first) {
+		// 						result = 'Height ' + item.axisValueLabel + '<br/>';
+		// 						first = false;
+		// 					}
+		// 					result += item.marker + ' ' + item.seriesName + ': ' + item.value + '<br/>';
+		// 				} else {
+		// 					if (first) {
+		// 						result = 'Ratio ' + item.axisValueLabel + '<br/>';
+		// 						first = false;
+		// 					}
+		// 					result += item.marker + ' ' + item.seriesName + ': ' + item.value + '<br/>';
+		// 				}
+		// 			}
+		// 		});
+		// 		return result;
+		// 	},
+		// 	position: ['10.5%', '15%']
+		// },
+		series: [
+			{
+				type: 'line',
+				name: 'ADV ResNet',
+				data: [0.0495, 0.0977, 0.2117, 0.2626],
+				lineStyle: {
+					color: 'rgb(84, 112, 198)'
+				},
+			},
+			{
+				type: 'line',
+				name: 'ADV ResNet',
+				data: ['-', '-', '-', '-', 0.0186, 0.0731, 0.1484, 0.2732],
+				lineStyle: {
+					color: 'rgb(84, 112, 198)'
+				},
+			},
+			{
+				type: 'line',
+				name: 'COV ResNet',
+				data: [0.0195, 0.0273, 0.0495, 0.0936],
+				lineStyle: {
+					color: 'rgb(145, 204, 117)'
+				},
+			},
+			{
+				type: 'line',
+				name: 'COV ResNet',
+				data: ['-', '-', '-', '-', 0.0151, 0.0163, 0.0218, 0.1186],
+				lineStyle: {
+					color: 'rgb(145, 204, 117)'
+				},
+			},
+			{
+				type: 'line',
+				name: 'IID ResNet',
+				data: [0.0331, 0.0609, 0.0893, 0.1289],
+				lineStyle: {
+					color: 'rgb(250, 200, 88)'
+				},
+			},
+			{
+				type: 'line',
+				name: 'IID ResNet',
+				data: ['-', '-', '-', '-', 0.0154, 0.0177, 0.0333, 0.1437],
+				lineStyle: {
+					color: 'rgb(250, 200, 88)'
+				},
+			},
+			{
+				type: 'line',
+				name: 'OOD ResNet',
+				data: [0.0738, 0.1638, 0.2117, 0.2537],
+				lineStyle: {
+					color: 'rgb(238, 102, 102)'
+				},
+			},
+			{
+				type: 'line',
+				name: 'OOD ResNet',
+				data: ['-', '-', '-', '-', 0.0855, 0.2413, 0.3243, 0.3856],
+				lineStyle: {
+					color: 'rgb(238, 102, 102)'
+				},
+			},
+
+			{
+				type: 'line',
+				name: 'ADV VGG19',
+				data: [0.0495, 0.0977, 0.2117, 0.2626],
+				lineStyle: {
+					type: 'dashed',
+					color: 'rgb(84, 112, 198)'
+				},
+				itemStyle: {
+					color: 'rgb(84, 112, 198)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'ADV VGG19',
+				data: ['-', '-', '-', '-', 0.0186, 0.0731, 0.1484, 0.2732],
+				lineStyle: {
+					type: 'dashed',
+					color: 'rgb(84, 112, 198)'
+				},
+				itemStyle: {
+					color: 'rgb(84, 112, 198)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'COV VGG19',
+				data: [0.0195, 0.0273, 0.0495, 0.0936],
+				lineStyle: {
+					type: 'dashed',
+					color: 'rgb(145, 204, 117)'
+				},
+				itemStyle: {
+					color: 'rgb(145, 204, 117)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'COV VGG19',
+				data: ['-', '-', '-', '-', 0.0151, 0.0163, 0.0218, 0.1186],
+				lineStyle: {
+					type: 'dashed',
+					color: 'rgb(145, 204, 117)'
+				},
+				itemStyle: {
+					color: 'rgb(145, 204, 117)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'IID VGG19',
+				data: [0.0331, 0.0609, 0.0893, 0.1289],
+				lineStyle: {
+					type: 'dashed',
+					color: 'rgb(250, 200, 88)'
+				},
+				itemStyle: {
+					color: 'rgb(250, 200, 88)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'IID VGG19',
+				data: ['-', '-', '-', '-', 0.0154, 0.0177, 0.0333, 0.1437],
+				lineStyle: {
+					type: 'dashed',
+					color: 'rgb(250, 200, 88)'
+				},
+				itemStyle: {
+					color: 'rgb(250, 200, 88)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'OOD VGG19',
+				data: [0.0738, 0.1638, 0.2117, 0.2537],
+				lineStyle: {
+					type: 'dashed',
+					color: 'rgb(238, 102, 102)'
+				},
+				itemStyle: {
+					color: 'rgb(238, 102, 102)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'OOD VGG19',
+				data: ['-', '-', '-', '-', 0.0855, 0.2413, 0.3243, 0.3856],
+				lineStyle: {
+					type: 'dashed',
+					color: 'rgb(238, 102, 102)'
+				},
+				itemStyle: {
+					color: 'rgb(238, 102, 102)'
+				}
+			}
+		]
+	}
+	return (
+		<React.Fragment>
+			<MyTitle>SamplingMethod Comparison</MyTitle>
+			<Box component="div" style={{ flex: 1 }}>
+				<EChartsReact option={option} style={{ height: '100%', width: '100%' }} />
+			</Box>
+		</React.Fragment>
+	);
+}
