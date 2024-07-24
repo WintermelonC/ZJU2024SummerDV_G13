@@ -279,7 +279,7 @@ function GetOption(sampTarget) {
 				"0", "1", "2", "3", "4",
 			],
 			name: "Run\nIndex",
-			// nameGap: 30,
+			nameGap: 30,
 			nameTextStyle: {
 				align: 'center'
 			},
@@ -349,12 +349,30 @@ function GetOption(sampTarget) {
 			splitArea: {
 				show: true
 			},
+			max: 0.55,
+			name: "Level\n2",
+			nameLocation: 'middle',
+			nameRotate: 0,
+			nameGap: 50,
+			nameTextStyle: {
+				fontWeight: 'bold',
+				align: 'center'
+			},
 		},
 		{
 			gridIndex: 1,
 			type: 'value',
 			splitArea: {
 				show: true
+			},
+			max: 0.55,
+			name: "Level\n4",
+			nameLocation: 'middle',
+			nameRotate: 0,
+			nameGap: 50,
+			nameTextStyle: {
+				fontWeight: 'bold',
+				align: 'center'
 			},
 		},
 		{
@@ -363,6 +381,15 @@ function GetOption(sampTarget) {
 			splitArea: {
 				show: true
 			},
+			max: 0.55,
+			name: "Level\n8",
+			nameLocation: 'middle',
+			nameRotate: 0,
+			nameGap: 50,
+			nameTextStyle: {
+				fontWeight: 'bold',
+				align: 'center'
+			},
 		},
 		{
 			gridIndex: 3,
@@ -370,12 +397,22 @@ function GetOption(sampTarget) {
 			splitArea: {
 				show: true
 			},
+			max: 0.55,
+			name: "Level\n16",
+			nameLocation: 'middle',
+			nameRotate: 0,
+			nameGap: 50,
+			nameTextStyle: {
+				fontWeight: 'bold',
+				align: 'center'
+			},
 		},
 	];
 
 	switch (sampTarget) {
 		case "Height": {
 			option = {
+				animationDuration: 200,
 				grid: [
 					{
 						top: '16%',
@@ -403,6 +440,7 @@ function GetOption(sampTarget) {
 		}
 		case "Ratio": {
 			option = {
+				animationDuration: 200,
 				grid: [
 					{
 						top: '16%',

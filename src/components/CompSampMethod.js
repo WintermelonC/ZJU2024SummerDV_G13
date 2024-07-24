@@ -92,47 +92,17 @@ export default function CompSampMethod() {
 		series: [
 			{
 				type: 'line',
-				name: 'IID',
-				data: [0.0331, 0.0609, 0.0893, 0.1289],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				}
-			},
-			{
-				type: 'line',
-				name: 'IID',
-				data: ['-', '-', '-', '-', 0.0154, 0.0177, 0.0333, 0.1437],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				}
-			},
-			{
-				type: 'line',
-				name: 'COV',
-				data: [0.0195, 0.0273, 0.0495, 0.0936],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				}
-			},
-			{
-				type: 'line',
-				name: 'COV',
-				data: ['-', '-', '-', '-', 0.0151, 0.0163, 0.0218, 0.1186],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				}
-			},
-			{
-				type: 'line',
 				name: 'ADV',
 				data: [0.0495, 0.0977, 0.2117, 0.2626],
 				symbol: 'circle',
 				symbolSize: function (value) {
 					return value * 90;
+				},
+				lineStyle: {
+					color: 'rgb(84, 112, 198)'
+				},
+				itemStyle: {
+					color: 'rgb(84, 112, 198)'
 				}
 			},
 			{
@@ -142,6 +112,72 @@ export default function CompSampMethod() {
 				symbol: 'circle',
 				symbolSize: function (value) {
 					return value * 90;
+				},
+				lineStyle: {
+					color: 'rgb(84, 112, 198)'
+				},
+				itemStyle: {
+					color: 'rgb(84, 112, 198)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'COV',
+				data: [0.0195, 0.0273, 0.0495, 0.0936],
+				symbol: 'circle',
+				symbolSize: function (value) {
+					return value * 90;
+				},
+				lineStyle: {
+					color: 'rgb(145, 204, 117)'
+				},
+				itemStyle: {
+					color: 'rgb(145, 204, 117)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'COV',
+				data: ['-', '-', '-', '-', 0.0151, 0.0163, 0.0218, 0.1186],
+				symbol: 'circle',
+				symbolSize: function (value) {
+					return value * 90;
+				},
+				lineStyle: {
+					color: 'rgb(145, 204, 117)'
+				},
+				itemStyle: {
+					color: 'rgb(145, 204, 117)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'IID',
+				data: [0.0331, 0.0609, 0.0893, 0.1289],
+				symbol: 'circle',
+				symbolSize: function (value) {
+					return value * 90;
+				},
+				lineStyle: {
+					color: 'rgb(250, 200, 88)'
+				},
+				itemStyle: {
+					color: 'rgb(250, 200, 88)'
+				}
+			},
+			{
+				type: 'line',
+				name: 'IID',
+				data: ['-', '-', '-', '-', 0.0154, 0.0177, 0.0333, 0.1437],
+				symbol: 'circle',
+				symbolSize: function (value) {
+					return value * 90;
+				},
+				lineStyle: {
+					color: 'rgb(250, 200, 88)'
+				},
+				itemStyle: {
+					color: 'rgb(250, 200, 88)'
 				}
 			},
 			{
@@ -151,6 +187,12 @@ export default function CompSampMethod() {
 				symbol: 'circle',
 				symbolSize: function (value) {
 					return value * 90;
+				},
+				lineStyle: {
+					color: 'rgb(238, 102, 102)'
+				},
+				itemStyle: {
+					color: 'rgb(238, 102, 102)'
 				}
 			},
 			{
@@ -160,6 +202,12 @@ export default function CompSampMethod() {
 				symbol: 'circle',
 				symbolSize: function (value) {
 					return value * 90;
+				},
+				lineStyle: {
+					color: 'rgb(238, 102, 102)'
+				},
+				itemStyle: {
+					color: 'rgb(238, 102, 102)'
 				}
 			}
 		]

@@ -20,9 +20,6 @@ export default function SelectSampTarget({ onTargetChange }) {
 				onChange={handleChange}
 				label="SamplingTarget"
 			>
-				<MenuItem value="">
-					<em>None</em>
-				</MenuItem>
 				<MenuItem value="Height">Height</MenuItem>
 				<MenuItem value="Ratio">Ratio</MenuItem>
 			</Select>
