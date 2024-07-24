@@ -217,7 +217,7 @@ export default function CompSampMethod() {
 	}
 	return (
 		<React.Fragment>
-			<MyTitle>SamplingMethod Comparison: from SamplingLevel and SamplingTarget</MyTitle>
+			<MyTitle>SamplingMethod Comparison: from DownSamplingLevel and SamplingTarget</MyTitle>
 			<Box component="div" style={{ flex: 1 }}>
 				<EChartsReact option={option} style={{ height: '100%', width: '100%' }} />
 			</Box>

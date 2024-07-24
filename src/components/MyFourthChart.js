@@ -224,7 +224,7 @@ export default function CompSampMethod() {
 	}
 	return (
 		<React.Fragment>
-			<MyTitle>SamplingMethod Comparison: from ModelName</MyTitle>
+			<MyTitle>Model Comparison</MyTitle>
 			<Box component="div" style={{ flex: 1 }}>
 				<EChartsReact option={option} style={{ height: '100%', width: '100%' }} />
 			</Box>
