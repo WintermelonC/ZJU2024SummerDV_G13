@@ -29,7 +29,7 @@ function App() {
             <Grid item xs={12} md={6} xl={6}>
               <Paper
                 sx={{
-                  height: '480px',
+                  height: '410px',
                   padding: '16px',
                   flexDirection: 'column',
                   overflow: 'auto',
@@ -42,7 +42,33 @@ function App() {
             <Grid item xs={12} md={6} xl={6}>
               <Paper
                 sx={{
-                  height: '480px',
+                  height: '410px',
+                  padding: '16px',
+                  flexDirection: 'column',
+                  overflow: 'auto',
+                  display: 'flex'
+                }}
+              >
+                <CompRunIndex />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6} xl={6}>
+              <Paper
+                sx={{
+                  height: '410px',
+                  padding: '16px',
+                  flexDirection: 'column',
+                  overflow: 'auto',
+                  display: 'flex'
+                }}
+              >
+                <CompSampMethod />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6} xl={6}>
+              <Paper
+                sx={{
+                  height: '410px',
                   padding: '16px',
                   flexDirection: 'column',
                   overflow: 'auto',

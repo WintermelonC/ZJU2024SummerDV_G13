@@ -76,12 +76,15 @@ function GetOption(sampTarget) {
 			gridIndex: 0,
 			type: 'category',
 			data: ["1", "2", "3", "4", "5"],
-			name: "BarChartType",
+			name: "BarChartType\n\n\n\n",
 			nameGap: 26,
 			nameTextStyle: {
-				align: 'center'
+				align: 'center',
+				fontWeight: 'bold',
+				fontStyle: 'oblique',
+				fontSize: 12
 			},
-			nameLocation: 'middle',
+			nameLocation: 'end',
 			splitLine: {
 				show: true,
 				lineStyle: {
@@ -416,18 +419,18 @@ function GetOption(sampTarget) {
 				grid: [
 					{
 						top: '16%',
-						height: '20%',
+						height: '19%',
 					},
 					{
-						top: '36%',
-						height: '20%',
+						top: '35%',
+						height: '19%',
 					},
 					{
-						top: '56%',
-						height: '20%',
+						top: '54%',
+						height: '19%',
 					},
 					{
-						top: '76%',
+						top: '73%',
 						height: '19%',
 					}
 				],
@@ -444,18 +447,18 @@ function GetOption(sampTarget) {
 				grid: [
 					{
 						top: '16%',
-						height: '20%',
+						height: '19%',
 					},
 					{
-						top: '36%',
-						height: '20%',
+						top: '35%',
+						height: '19%',
 					},
 					{
-						top: '56%',
-						height: '20%',
+						top: '54%',
+						height: '19%',
 					},
 					{
-						top: '76%',
+						top: '73%',
 						height: '19%',
 					}
 				],
