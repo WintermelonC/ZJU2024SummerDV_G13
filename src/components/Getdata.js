@@ -1,4 +1,4 @@
-export default function Getdata() {
+export default function GetData() {
 	const data = {
 		H2ADV: [
 			[0.0381, 0.0354, 0.0983, 0.0284, 0.0345],

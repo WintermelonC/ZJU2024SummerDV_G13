@@ -1,7 +1,7 @@
-import Getdata from './GetData';
+import GetData from './GetData';
 
 export default function GetSeries() {
-	const data = Getdata();
+	const data = GetData();
 	const heightSeriesOption = [
 		// 第一行
 		{
