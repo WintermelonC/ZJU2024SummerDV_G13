@@ -1,225 +1,75 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import EChartsReact from 'echarts-for-react';
+// import EChartsReact from 'echarts-for-react';
+import * as echarts from 'echarts';
 
 import MyTitle from './MyTitle.js';
+import GetFirstOption from './GetFirstOption.js';
 
 export default function CompSampMethod() {
-	const option = {
-		grid: {
-			bottom: '5%'
-		},
-		xAxis: [
-			{
-				type: 'category',
-				data: ['2', '4', '8', '16', '2', '4', '8', '16'],
-				name: 'Down\nSampling\nLevel',
-				nameGap: 40,
-				nameTextStyle: {
-					align: 'center'
-				}
-			},
-			{
-				type: 'category',
-				data: ['Height', 'Ratio'],
-				name: 'Sampling\nTarget',
-				nameGap: 40,
-				nameTextStyle: {
-					align: 'center'
-				},
-				axisPointer: {
-					type: false
-				},
-				splitLine: {
-					show: true,
-					lineStyle: {
-						color: ['#aaa']
-					}
-				}
-			}
-		],
-		yAxis: {
-			type: 'value',
-			name: 'MeanError',
-			splitNumber: 8,
-			splitArea: {
-				show: true
-			},
-			max: 0.45
-		},
-		legend: {
-			top: 'top'
-		},
-		tooltip: {
-			trigger: 'axis',
-			axisPointer: {
-				type: 'cross',
-				snap: 'true'
-			},
-			formatter: function (params) {
-				let result;
-				let first = true;
-				let itemsWithValues = [];
-				params.forEach(function (item) {
-					if (item.value !== '-') {
-						itemsWithValues.push(item);
-					}
-				});
+	const chartRef = React.useRef(null);
+	let chartInstance = null;
 
-				// 对具有具体数据的项进行排序，从大到小
-				itemsWithValues.sort(function (a, b) {
-					return b.value - a.value;
-				});
+	const initChart = () => {
+		const current = chartRef.current;
+		if (current) {
+			chartInstance = echarts.init(current);
+			const option = GetFirstOption();
 
-				itemsWithValues.forEach(function (item) {
-					if (item.value !== '-') {
-						if (item.dataIndex >= 0 && item.dataIndex <= 3) {
-							if (first) {
-								result = 'Height ' + item.axisValueLabel + '<br/>';
-								first = false;
+			chartInstance.setOption(option);
+
+			chartInstance.on('legendselectchanged', function (event) {
+				const selected = event.selected;
+				const selectedCount = Object.values(selected).filter(isSelected => isSelected).length;
+				// console.log(selectedCount);
+
+				const updatedSeries = option.series.map(seriesItem => {
+					// 当只有一个图例被选中时，根据图例选择进行显示或隐藏
+					if (selectedCount === 1) {
+						if (seriesItem.type === 'boxplot') {
+							if (selected[seriesItem.name]) {
+								return { ...seriesItem, itemStyle: { opacity: 1 } };
+							} else {
+								return { ...seriesItem, itemStyle: { opacity: 0 } };
 							}
-							result += item.marker + ' ' + item.seriesName + ': ' + item.value + '<br/>';
 						} else {
-							if (first) {
-								result = 'Ratio ' + item.axisValueLabel + '<br/>';
-								first = false;
+							// 对于非 'boxplot' 类型的 series，始终保持显示
+							return { ...seriesItem, itemStyle: { opacity: 1 } };
+						}
+					} else {
+						if (seriesItem.type === 'boxplot') {
+							if (selected[seriesItem.name]) {
+								return { ...seriesItem, itemStyle: { opacity: 0 } };
+							} else {
+								return { ...seriesItem, itemStyle: { opacity: 0 } };
 							}
-							result += item.marker + ' ' + item.seriesName + ': ' + item.value + '<br/>';
+						} else {
+							// 对于非 'boxplot' 类型的 series，始终保持显示
+							return { ...seriesItem, itemStyle: { opacity: 1 } };
 						}
 					}
 				});
-				return result;
-			},
-			position: ['10.5%', '18%']
-		},
-		series: [
-			{
-				type: 'line',
-				name: 'ADV',
-				data: [0.0495, 0.0977, 0.2117, 0.2626],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				},
-				lineStyle: {
-					color: 'rgb(84, 112, 198)'
-				},
-				itemStyle: {
-					color: 'rgb(84, 112, 198)'
-				}
-			},
-			{
-				type: 'line',
-				name: 'ADV',
-				data: ['-', '-', '-', '-', 0.0186, 0.0731, 0.1484, 0.2732],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				},
-				lineStyle: {
-					color: 'rgb(84, 112, 198)'
-				},
-				itemStyle: {
-					color: 'rgb(84, 112, 198)'
-				}
-			},
-			{
-				type: 'line',
-				name: 'COV',
-				data: [0.0195, 0.0273, 0.0495, 0.0936],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				},
-				lineStyle: {
-					color: 'rgb(145, 204, 117)'
-				},
-				itemStyle: {
-					color: 'rgb(145, 204, 117)'
-				}
-			},
-			{
-				type: 'line',
-				name: 'COV',
-				data: ['-', '-', '-', '-', 0.0151, 0.0163, 0.0218, 0.1186],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				},
-				lineStyle: {
-					color: 'rgb(145, 204, 117)'
-				},
-				itemStyle: {
-					color: 'rgb(145, 204, 117)'
-				}
-			},
-			{
-				type: 'line',
-				name: 'IID',
-				data: [0.0331, 0.0609, 0.0893, 0.1289],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				},
-				lineStyle: {
-					color: 'rgb(250, 200, 88)'
-				},
-				itemStyle: {
-					color: 'rgb(250, 200, 88)'
-				}
-			},
-			{
-				type: 'line',
-				name: 'IID',
-				data: ['-', '-', '-', '-', 0.0154, 0.0177, 0.0333, 0.1437],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				},
-				lineStyle: {
-					color: 'rgb(250, 200, 88)'
-				},
-				itemStyle: {
-					color: 'rgb(250, 200, 88)'
-				}
-			},
-			{
-				type: 'line',
-				name: 'OOD',
-				data: [0.0738, 0.1638, 0.2117, 0.2537],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				},
-				lineStyle: {
-					color: 'rgb(238, 102, 102)'
-				},
-				itemStyle: {
-					color: 'rgb(238, 102, 102)'
-				}
-			},
-			{
-				type: 'line',
-				name: 'OOD',
-				data: ['-', '-', '-', '-', 0.0855, 0.2413, 0.3243, 0.3856],
-				symbol: 'circle',
-				symbolSize: function (value) {
-					return value * 90;
-				},
-				lineStyle: {
-					color: 'rgb(238, 102, 102)'
-				},
-				itemStyle: {
-					color: 'rgb(238, 102, 102)'
-				}
-			}
-		]
-	}
+
+				chartInstance.setOption({
+					series: updatedSeries
+				});
+			});
+		}
+	};
+
+	React.useEffect(() => {
+		initChart();
+		// 组件卸载时，清理资源
+		return () => {
+			chartInstance && chartInstance.dispose();
+		};
+	}, []);
+
 	return (
 		<React.Fragment>
 			<MyTitle>SamplingMethod Comparison: from DownSamplingLevel and SamplingTarget</MyTitle>
 			<Box component="div" style={{ flex: 1 }}>
-				<EChartsReact option={option} style={{ height: '100%', width: '100%' }} />
+				<div ref={chartRef} style={{ height: '100%', width: '100%' }} />
 			</Box>
 		</React.Fragment>
 	);
