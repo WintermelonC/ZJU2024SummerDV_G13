@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import GetSecondOption from './GetSecondOption';
 
 export default function MyLineChart({ sampTarget }) {
+	// 获取第二张图的option配置
 	const option = GetSecondOption(sampTarget);
 
 	return (

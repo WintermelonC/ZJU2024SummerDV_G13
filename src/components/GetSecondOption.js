@@ -2,9 +2,11 @@ import GetHeightSeries from './GetHeightSeries';
 import GetRatioSeries from './GetRatioSeries';
 
 export default function GetSecondOption(sampTarget) {
+	// 第二张图的option配置
 	let option = {};
 	const heightSeriesOption = GetHeightSeries();
 	const ratioSeriesOption = GetRatioSeries();
+	// 配置xAxis
 	const xAxisOption = [
 		{
 			gridIndex: 0,
@@ -331,6 +333,7 @@ export default function GetSecondOption(sampTarget) {
 			}
 		},
 	];
+	// 配置yAxis
 	const yAxisOption = [
 		{
 			gridIndex: 0,
@@ -410,10 +413,12 @@ export default function GetSecondOption(sampTarget) {
 		},
 	];
 
+	// 根据选项卡内容进行选择
 	switch (sampTarget) {
 		case "Height": {
 			option = {
 				animationDuration: 400,
+				// 4 x 1 网格
 				grid: [
 					{
 						top: '16%',
@@ -435,6 +440,7 @@ export default function GetSecondOption(sampTarget) {
 				legend: {},
 				xAxis: xAxisOption,
 				yAxis: yAxisOption,
+				// Height数据
 				series: heightSeriesOption,
 			}
 			break;
@@ -442,6 +448,7 @@ export default function GetSecondOption(sampTarget) {
 		case "Ratio": {
 			option = {
 				animationDuration: 400,
+				// 4 x 1 网格
 				grid: [
 					{
 						top: '16%',
@@ -463,6 +470,7 @@ export default function GetSecondOption(sampTarget) {
 				legend: {},
 				xAxis: xAxisOption,
 				yAxis: yAxisOption,
+				// Ratio数据
 				series: ratioSeriesOption,
 			}
 			break;

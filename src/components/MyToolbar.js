@@ -8,6 +8,7 @@ import SvgIcon from '@mui/material/SvgIcon';
 // import github_logo from '../svg/icons8-github.svg';
 
 export default function MyToolbar() {
+	// 设置Toolbar
 	return (
 		<AppBar position="absolute">
 			<Toolbar variant='dense'>
@@ -17,6 +18,7 @@ export default function MyToolbar() {
 				<Typography variant="h6" component="h1" sx={{ flexGrow: 1 }} noWrap>
 					ZJU 2024 Summer Data Visualization Bonus Project
 				</Typography>
+				{/* github仓库链接 */}
 				<a href='https://github.com/WintermelonC/ZJU2024SummerDV_G13' target="_blank" rel="noopener noreferrer">
 					<SvgIcon fontSize='large'>
 						<svg

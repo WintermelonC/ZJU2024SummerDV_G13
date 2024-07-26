@@ -5,6 +5,7 @@ import EChartsReact from 'echarts-for-react';
 import MyTitle from './MyTitle.js';
 
 export default function CompSampMethod() {
+	// 第四张图option配置
 	const option = {
 		grid: {
 			bottom: '5%'

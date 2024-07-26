@@ -7,9 +7,11 @@ export default function SelectSampTarget({ onTargetChange }) {
 
 	const handleChange = (event) => {
 		setTarget(event.target.value);
+		// 向父组件回调state值
 		onTargetChange(event.target.value);
 	};
 
+	// 选项卡设置
 	return (
 		<FormControl variant="standard" sx={{ m: 1, width: 140 }}>
 			<InputLabel id="select-standard-label" size='small'>SamplingTarget</InputLabel>

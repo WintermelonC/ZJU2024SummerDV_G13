@@ -1,6 +1,7 @@
 import GetData from './GetData';
 
-export default function GetSeries() {
+export default function GetRatioSeries() {
+	// 第二张图的Ratio数据
 	const data = GetData();
 	const heightSeriesOption = [
 		// 第一行
