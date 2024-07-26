@@ -5,6 +5,7 @@ import EChartsReact from 'echarts-for-react';
 import MyTitle from './MyTitle.js';
 
 export default function MyThirdChart() {
+	// 第三张图的option配置
 	const option = {
 		legend: {},
 		grid: [

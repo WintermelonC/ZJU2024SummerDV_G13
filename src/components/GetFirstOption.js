@@ -1,4 +1,5 @@
 export default function GetFirstOption() {
+	// 第一张图的option配置
 	const option = {
 		grid: {
 			bottom: '5%'

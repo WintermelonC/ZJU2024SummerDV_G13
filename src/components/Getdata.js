@@ -1,4 +1,6 @@
 export default function GetData() {
+	// 第二张图的data
+	// 并非手动输入，使用python生成这些数据
 	const data = {
 		H2ADV: [
 			[0.0381, 0.0354, 0.0983, 0.0284, 0.0345],

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 
 export default function MyTitle(props) {
+	// 设置标题样式
 	return (
 		<Typography
 			component="h2"

@@ -1,6 +1,7 @@
 import GetData from './GetData';
 
-export default function GetSeries() {
+export default function GetHeightSeries() {
+	// 第二张图的Height数据
 	const data = GetData();
 	const heightSeriesOption = [
 		// 第一行

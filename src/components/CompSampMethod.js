@@ -6,6 +6,7 @@ import * as echarts from 'echarts';
 import MyTitle from './MyTitle.js';
 import GetFirstOption from './GetFirstOption.js';
 
+// 读取用户是否按下Ctrl键
 let ctrlPressed = false;
 
 document.addEventListener('keydown', (event) => {
@@ -24,18 +25,23 @@ export default function CompSampMethod() {
 	const chartRef = React.useRef(null);
 	let chartInstance = null;
 
+	// 初始化图表实例
 	const initChart = () => {
 		const current = chartRef.current;
 		if (current) {
 			chartInstance = echarts.init(current);
+			// 获取图表option配置
 			const option = GetFirstOption();
 
 			chartInstance.setOption(option);
 
+			// 监测图例选择事件
 			chartInstance.on('legendselectchanged', function (event) {
 				const selected = event.selected;
+				// 监测选中的图例数量
 				const selectedCount = Object.values(selected).filter(isSelected => isSelected).length;
 				// console.log(selectedCount);
+
 				if (ctrlPressed) {
 					const selectedName = event.name;
 					const updatedSelected = {};
@@ -54,6 +60,7 @@ export default function CompSampMethod() {
 						}
 					});
 
+					// 更新图表配置
 					chartInstance.setOption({
 						legend: {
 							selected: updatedSelected,
@@ -71,7 +78,7 @@ export default function CompSampMethod() {
 									return { ...seriesItem, itemStyle: { opacity: 0 } };
 								}
 							} else {
-								// 对于非 'boxplot' 类型的 series，始终保持显示
+								// 对于非 'boxplot' 类型的 series
 								return { ...seriesItem, itemStyle: { opacity: 0.5 }, lineStyle: { opacity: 0.5 } };
 							}
 						} else {
@@ -82,7 +89,7 @@ export default function CompSampMethod() {
 									return { ...seriesItem, itemStyle: { opacity: 0 } };
 								}
 							} else {
-								// 对于非 'boxplot' 类型的 series，始终保持显示
+								// 对于非 'boxplot' 类型的 series
 								return { ...seriesItem, itemStyle: { opacity: 1 }, lineStyle: { opacity: 1 } };
 							}
 						}
