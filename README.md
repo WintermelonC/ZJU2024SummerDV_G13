@@ -4,7 +4,6 @@
 - eslint etc.
 - echarts etc.
 - material UI etc.
-- papaparse
 # 使用方法
 在本地文件夹下依次运行：`npm install`  `npm start`
 # 小组成员注意事项
