@@ -18,6 +18,7 @@
 (SamplingTarget) C变量：高度和比率：height、ratio
 
 (SamplingMethod) D变量：4个分割数据方法：
+
 - D1：IID
 - D2：COV
 - D3：ADV
