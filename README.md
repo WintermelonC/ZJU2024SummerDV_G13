@@ -30,6 +30,6 @@
 
 # Contributors
 
-- [@WintermelonC](https://github.com/WintermelonC)
 - [@Joycellll](https://github.com/Joycellll)
+- [@WintermelonC](https://github.com/WintermelonC)
 - [@zjufzy](https://github.com/zjufzy)
