@@ -27,3 +27,9 @@
 (DownSamplingLevel) E变量：4个不同数量：16、8、4、2
 
 (RunIndex) F变量：5个运行次数：0、1、2、3、4
+
+# Contributors
+
+- [@WintermelonC](https://github.com/WintermelonC)
+- [@Joycellll](https://github.com/Joycellll)
+- [@zjufzy](https://github.com/zjufzy)
